@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment4</title>
+</head>
+<body>
+  <h1>Sorting Hat</h1>
+  <form>
+    <label for="studentName">Enter your name:</label>
+    <input type="text" id="studentName" name="studentName" required>
+    <button type="button" onclick="sortStudent()">Sort Student</button>
+  </form>
+  <div id="result"></div>
+</body>
+<script src="Ass_4.js">
+  function sortStudent() {
+    const studentName = document.getElementById('studentName').value;
+
+    const randomNumber = Math.floor(Math.random() * 4) + 1;
+
+    // Switch statement to determine the student's house
+    switch (randomNumber) {
+      case 1:
+        document.getElementById('result').innerHTML = `Welcome to Gryffindor, ${studentName}!`;
+        break;
+      case 2:
+        document.getElementById('result').innerHTML = `Welcome to Hufflepuff, ${studentName}!`;
+        break;
+      case 3:
+        document.getElementById('result').innerHTML = `Welcome to Ravenclaw, ${studentName}!`;
+        break;
+      case 4:
+        document.getElementById('result').innerHTML = `Welcome to Slytherin, ${studentName}!`;
+        break;
+    }
+  }
+</script>
+</html>
